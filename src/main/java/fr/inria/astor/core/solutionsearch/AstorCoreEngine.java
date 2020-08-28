@@ -1,8 +1,6 @@
 package fr.inria.astor.core.solutionsearch;
 
-import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
+import java.io.*;
 import java.net.URL;
 import java.text.ParseException;
 import java.util.ArrayList;
@@ -902,8 +900,34 @@ public abstract class AstorCoreEngine implements AstorExtensionPoint {
 			log.info("Test retrieved from classes: " + regressionTestForFaultLocalization.size());
 		}
 
-		List<SuspiciousCode> susp = this.getFaultLocalization()
-				.searchSuspicious(getProjectFacade(), regressionTestForFaultLocalization).getCandidates();
+		List<SuspiciousCode> susp = new ArrayList<>();
+		// use the predefined suspicious list
+		if (ConfigurationProperties.hasProperty("faultfile")) {
+			try {
+				FileReader fileReader = new FileReader(ConfigurationProperties.getProperty("faultfile"));
+				BufferedReader reader = new BufferedReader(fileReader);
+				String line = null;
+				while ((line = reader.readLine()) != null) {
+					String[] elements = line.split("@");
+					SuspiciousCode spc = new SuspiciousCode(
+							elements[0],
+							Integer.parseInt(elements[1]),
+							Double.parseDouble(elements[2]));
+					susp.add(spc);
+				}
+				reader.close();
+				fileReader.close();
+			}
+			catch (Exception e){
+				e.printStackTrace();
+				log.error("Error while reading predefined suspicious statements");
+				System.exit(1);
+			}
+		}
+		else {
+			susp = this.getFaultLocalization()
+					.searchSuspicious(getProjectFacade(), regressionTestForFaultLocalization).getCandidates();
+		}
 
 		long endtime = System.currentTimeMillis();
 		// milliseconds

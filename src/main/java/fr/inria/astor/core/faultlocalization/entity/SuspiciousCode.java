@@ -57,6 +57,12 @@ public class SuspiciousCode {
 		this.suspiciousValue = susp;
 	}
 
+	public SuspiciousCode(String className, int lineNumber, double suspiciousValue) {
+		this.className = className;
+		this.lineNumber = lineNumber;
+		this.suspiciousValue = suspiciousValue;
+	}
+
 	public int getLineNumber() {
 		return lineNumber;
 	}

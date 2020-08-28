@@ -293,6 +293,8 @@ public abstract class AbstractMain {
 
 		options.addOption("runjava7code", false, "Validates on Java 7");
 
+		options.addOption("faultfile", true, "File which contains faulty information");
+
 	}
 
 	public abstract void run(String location, String projectName, String dependencies, String packageToInstrument,
@@ -648,6 +650,14 @@ public abstract class AbstractMain {
 				ConfigurationProperties.properties.setProperty(key, value);
 
 			}
+		}
+
+		if (cmd.hasOption("faultfile")) {
+			if (!new File(cmd.getOptionValue("faultfile")).exists()) {
+				System.err.println(String.format("Fault file %s not found!", cmd.getOptionValue("faultfile")));
+				return false;
+			}
+			ConfigurationProperties.properties.setProperty("faultfile", cmd.getOptionValue("faultfile"));
 		}
 
 		processOtherCommands(cmd);
