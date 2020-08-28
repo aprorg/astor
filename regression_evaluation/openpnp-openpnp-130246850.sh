@@ -1,7 +1,7 @@
 java -cp astor.jar fr.inria.main.evolution.AstorMain \
--location /Users/cuong/IdeaProjects/jrelifix/BugsDataset \
--dependencies /Users/cuong/IdeaProjects/jrelifix/BugsDataset/target/dependency \
--faultfile /Users/cuong/IdeaProjects/jrelifix/SusFiles/PerfectFL/openpnp-openpnp-130246850.txt \
+-location /home/cuong/IdeaProjects/apr-repo/regression-bugs \
+-dependencies /home/cuong/IdeaProjects/apr-repo/regression-bugs/target/dependency \
+-faultfile /home/cuong/IdeaProjects/jrelifix/SusFiles/PerfectFL/openpnp-openpnp-130246850.txt \
 -mode jgenprog \
 -srcjavafolder /src/main/java \
 -srctestfolder /src/test/java \
