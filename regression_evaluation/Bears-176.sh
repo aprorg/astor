@@ -1,8 +1,8 @@
 java -cp astor.jar fr.inria.main.evolution.AstorMain \
--location /home/cuong/IdeaProjects/apr-repo/regression-bugs/zipkin2 \
--dependencies /home/cuong/IdeaProjects/apr-repo/regression-bugs/zipkin2/target/dependency \
+-location /Users/cuong/IdeaProjects/jrelifix/BugsDataset/zipkin2 \
+-dependencies /Users/cuong/IdeaProjects/jrelifix/BugsDataset/zipkin2/target/dependency \
 -faultfile /home/cuong/IdeaProjects/jrelifix/SusFiles/PerfectFL/Bears-176.txt \
--mode jgenprog \
+-mode jmutrepair \
 -srcjavafolder /src/main/java \
 -srctestfolder /src/test/java \
 -binjavafolder /target/classes \

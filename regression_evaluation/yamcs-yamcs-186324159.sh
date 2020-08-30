@@ -1,8 +1,8 @@
 java -cp astor.jar fr.inria.main.evolution.AstorMain \
--location /home/cuong/IdeaProjects/apr-repo/regression-bugs/yamcs-core \
--dependencies /home/cuong/IdeaProjects/apr-repo/regression-bugs/yamcs-core/target/dependency \
+-location /Users/cuong/IdeaProjects/jrelifix/BugsDataset/yamcs-core \
+-dependencies /Users/cuong/IdeaProjects/jrelifix/BugsDataset/yamcs-core/target/dependency \
 -faultfile /home/cuong/IdeaProjects/jrelifix/SusFiles/PerfectFL/yamcs-yamcs-186324159.txt \
--mode jgenprog \
+-mode jmutrepair \
 -srcjavafolder /src/main/java \
 -srctestfolder /src/test/java \
 -binjavafolder /target/classes \

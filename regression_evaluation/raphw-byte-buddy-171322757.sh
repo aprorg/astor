@@ -1,8 +1,8 @@
 java -cp astor.jar fr.inria.main.evolution.AstorMain \
--location /home/cuong/IdeaProjects/apr-repo/regression-bugs/byte-buddy-dep \
--dependencies /home/cuong/IdeaProjects/apr-repo/regression-bugs/byte-buddy-dep/target/dependency \
+-location /Users/cuong/IdeaProjects/jrelifix/BugsDataset/byte-buddy-dep \
+-dependencies /Users/cuong/IdeaProjects/jrelifix/BugsDataset/byte-buddy-dep/target/dependency \
 -faultfile /home/cuong/IdeaProjects/jrelifix/SusFiles/PerfectFL/raphw-byte-buddy-171322757.txt \
--mode jgenprog \
+-mode jmutrepair \
 -srcjavafolder /src/main/java \
 -srctestfolder /src/test/java \
 -binjavafolder /target/classes \

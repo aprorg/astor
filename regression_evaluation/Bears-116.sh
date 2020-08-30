@@ -1,8 +1,8 @@
 java -cp astor.jar fr.inria.main.evolution.AstorMain \
--location /home/cuong/IdeaProjects/apr-repo/regression-bugs \
--dependencies /home/cuong/IdeaProjects/apr-repo/regression-bugs/target/dependency \
+-location /Users/cuong/IdeaProjects/jrelifix/BugsDataset \
+-dependencies /Users/cuong/IdeaProjects/jrelifix/BugsDataset/target/dependency \
 -faultfile /home/cuong/IdeaProjects/jrelifix/SusFiles/PerfectFL/Bears-116.txt \
--mode jgenprog \
+-mode jmutrepair \
 -srcjavafolder /src \
 -srctestfolder /test \
 -binjavafolder /target/classes \
