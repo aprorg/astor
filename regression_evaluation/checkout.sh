@@ -1,0 +1,1 @@
+git clean -fdx .  && git checkout yamcs-yamcs-186324159 && ./reproduce_bug.sh

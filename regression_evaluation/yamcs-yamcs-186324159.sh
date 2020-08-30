@@ -1,11 +1,12 @@
 java -cp astor.jar fr.inria.main.evolution.AstorMain \
 -location /Users/cuong/IdeaProjects/jrelifix/BugsDataset/yamcs-core \
 -dependencies /Users/cuong/IdeaProjects/jrelifix/BugsDataset/yamcs-core/target/dependency \
--faultfile /home/cuong/IdeaProjects/jrelifix/SusFiles/PerfectFL/yamcs-yamcs-186324159.txt \
--mode jmutrepair \
+-faultfile /Users/cuong/IdeaProjects/jrelifix/SusFiles/PerfectFL/yamcs-yamcs-186324159.txt \
+-mode jgenprog \
 -srcjavafolder /src/main/java \
 -srctestfolder /src/test/java \
 -binjavafolder /target/classes \
 -bintestfolder /target/test-classes \
--ignoredTestCases org.yamcs.ArchiveIntegrationTest \
+-ignoredtestcases org.yamcs.ArchiveIntegrationTest \
+-loglevel DEBUG \
 -stopfirst true

@@ -1,0 +1,5 @@
+--- /src/main/java/com/peterphi/std/guice/hibernate/webquery/impl/jpa/JPASearchExecutor.java
++++ /src/main/java/com/peterphi/std/guice/hibernate/webquery/impl/jpa/JPASearchExecutor.java
+@@ -91 +90,0 @@
+-			statementLog.close();
+

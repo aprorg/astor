@@ -1,7 +1,7 @@
 java -cp astor.jar fr.inria.main.evolution.AstorMain \
 -location /Users/cuong/IdeaProjects/jrelifix/BugsDataset \
 -dependencies /Users/cuong/IdeaProjects/jrelifix/BugsDataset/target/dependency \
--faultfile /home/cuong/IdeaProjects/jrelifix/SusFiles/PerfectFL/openpnp-openpnp-130246850.txt \
+-faultfile /Users/cuong/IdeaProjects/jrelifix/SusFiles/PerfectFL/openpnp-openpnp-130246850.txt \
 -mode jmutrepair \
 -srcjavafolder /src/main/java \
 -srctestfolder /src/test/java \
